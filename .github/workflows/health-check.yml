@@ -51,8 +51,9 @@ jobs:
         id: metrics
         env:
           SOURCES: |
-            GitHub->https://github.com
-            Facebook->https://facebook.com
+            Seeweb->https://www.seeweb.it/
+            Support->https://supporto.seeweb.it
+            Aop->https://aop.seeweb.it/
           GITHUB_TOKEN: ${{ github.token }}
           JOB_NAME: ${{ github.workflow }}
           ARTIFACT_NAME: ${{ env.ARTIFACT_NAME }}
