@@ -1,19 +1,34 @@
 <script lang="ts">
-  import type { ReportFile } from '$lib/types';
-  import moment from 'moment';
-  export let incidents: ReportFile['incidents'];
+	import type { ReportFile } from '$lib/types';
+	import moment from 'moment';
+
+	export let incidents: ReportFile['incidents'];
 </script>
 
-<section class="mx-auto max-w-6xl my-10 space-y-4">
-  <h2 class="text-xl font-semibold px-1">Recent incidents</h2>
+<div class="">
+	<h1 class="text-2xl font-bold text-left">Recent incidents</h1>
+	<ul class="timeline timeline-vertical mt-4 lg:mt10">
+		{#each incidents as incident, i}
+			<li>
+				{#if i > 0}
+					<hr class:bg-primary={incident.open} />
+				{/if}
+				<div class="timeline-start">{moment.unix(incident.date).format('MMM Do YY')}</div>
+				<div class="timeline-middle" class:text-primary={incident.open}>
+					<div class="badge" class:badge-primary={incident.open}>
+						{#if incident.open}
+							⤫
+						{:else}
+							✓
+						{/if}
+					</div>
+				</div>
+				<div class="timeline-end timeline-box">{incident.title}</div>
 
-  {#each incidents as incident}
-    <article class="bg-white rounded-md shadow-sm border border-black/5 p-4">
-      <div class="flex items-center gap-2 text-sm text-secondary-dark">
-        <span class="circle {incident.open ? 'sunglow' : 'green'}"></span>
-        <span>{moment.unix(incident.date).format('MMM Do, YYYY')}</span>
-      </div>
-      <div class="mt-2 font-medium">{incident.title}</div>
-    </article>
-  {/each}
-</section>
+				{#if i < incidents.length - 1}
+					<hr class:bg-primary={incident.open} />
+				{/if}
+			</li>
+		{/each}
+	</ul>
+</div>

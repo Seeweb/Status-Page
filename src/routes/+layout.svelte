@@ -1,22 +1,19 @@
 <script lang="ts">
-  import '../app.css';
+	import '../app.css';
 </script>
 
-<div class="min-h-screen text-primary-dark">
-  <header class="sticky top-0 z-10 bg-secondary text-alabaster-50 shadow">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <h1 class="text-xl font-extrabold tracking-wide">
-        <span class="text-accent">Seeweb</span> Status
-      </h1>
-      <nav class="text-sm opacity-80">Live monitoring &amp; incidents</nav>
-    </div>
-  </header>
+<slot />
+<footer class="footer footer-center bg-base-300 text-base-content p-4 sticky top-[100vh]">
+	<aside>
+		<p>
+			<a href="https://github.com/Bullrich/GitHub-Status-Page">GitHub-Status-Page</a> made with ❤️
+			by <a href="https://bullrich.dev">Bullrich</a>
+		</p>
+	</aside>
+</footer>
 
-  <main class="mx-auto max-w-6xl px-4 py-8">
-    <slot />
-  </main>
-
-  <footer class="mx-auto max-w-6xl px-4 mt-16 py-6 text-sm opacity-60">
-    © {new Date().getFullYear()} Seeweb — Status page
-  </footer>
-</div>
+<style lang="postcss">
+	a {
+		@apply text-primary link hover:text-secondary;
+	}
+</style>
