@@ -2,15 +2,19 @@
 	import '../app.css';
 </script>
 
-<slot />
-<footer class="footer footer-center bg-base-300 text-base-content p-4 sticky top-[100vh]">
-	<aside>
-		<p>
-			Status page
-			<a href="https://www.seeweb.it/">Seeweb </a> 2025
-		</p>
-	</aside>
-</footer>
+<div class="min-h-screen flex flex-col">
+	<div class="flex-1">
+		<slot />
+	</div>
+	<footer class="footer footer-center bg-base-300 text-base-content p-4">
+		<aside>
+			<p>
+				Status page
+				<a href="https://www.seeweb.it/">Seeweb </a> 2025
+			</p>
+		</aside>
+	</footer>
+</div>
 
 <style lang="postcss">
 	a {
