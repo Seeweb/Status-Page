@@ -8,7 +8,10 @@
 	export let data: PageData;
 </script>
 
-<div class="w-full bg-accent header min-h-[20vh] lg:min-h-[25vh] flex items-end justify-center">
+<div class="w-full bg-accent header min-h-[20vh] lg:min-h-[25vh] flex items-end justify-center relative">
+	<a href="https://www.seeweb.it/" aria-label="Seeweb" class="absolute -top-[108px] left-4 flex items-center">
+		<img src="src/seeweb-srl-logo-vector.svg" alt="Seeweb logo" class="h-32 sm:h-40 md:h-52 lg:h-64 xl:h-80 w-auto" />
+	</a>
 	<div class="h-full w-full mx-2 md:mx-12">
 		<System systems={data.statusLog} />
 	</div>
