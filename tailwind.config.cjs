@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: '#F4C542', // giallo accessorio (legacy, se lo usi nelle @apply)
+        accent: '#F5DD3C', // giallo accessorio (legacy, se lo usi nelle @apply)
         sunglow: {
           50:  '#FFF8E1',
           100: '#FFECB3',

@@ -10,7 +10,7 @@
 		<aside>
 			<p>
 				Status page
-				<a href="https://www.seeweb.it/">Seeweb </a> 2025
+				<a href="https://www.seeweb.it/" class="link !text-accent hover:!text-accent">Seeweb</a> 2025
 			</p>
 		</aside>
 	</footer>
