@@ -2,7 +2,7 @@
 	import Incidents from '$lib/components/Incidents.svelte';
 	import Status from '$lib/components/Status.svelte';
 	import System from '$lib/components/System.svelte';
-
+	import Logo from '$lib/images/seeweb-srl-logo-vector.svg';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -10,7 +10,7 @@
 
 <div class="w-full bg-accent header min-h-[20vh] lg:min-h-[25vh] flex items-end justify-center relative">
 	<a href="https://www.seeweb.it/" aria-label="Seeweb" class="absolute -top-[108px] left-4 flex items-center">
-		<img src="/seeweb-srl-logo-vector.svg" alt="Seeweb logo" class="h-32 sm:h-40 md:h-52 lg:h-64 xl:h-80 w-auto" />
+		<img src="{Logo}" alt="Seeweb logo" class="h-32 sm:h-40 md:h-52 lg:h-64 xl:h-80 w-auto" />
 	</a>
 	<div class="h-full w-full mx-2 md:mx-12">
 		<System systems={data.statusLog} />
